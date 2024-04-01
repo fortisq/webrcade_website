@@ -1,0 +1,207 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    min-width: 250px;
+    background-color: #f0f0f0;
+    transition: margin-left 0.5s, background-color 0.5s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 0;
+    position: relative;
+    z-index: 1;
+}
+
+#sidebar.collapsed {
+    margin-left: -230px;
+    background-color: #000;
+}
+
+#sidebar:hover, #sidebar.collapsed:hover {
+    margin-left: 0;
+    background-color: #f0f0f0;
+}
+
+#sidebar * {
+    transition: opacity 0.5s;
+}
+
+#sidebar.collapsed * {
+    opacity: 0;
+}
+
+#sidebar:hover * {
+    opacity: 1;
+}
+
+#sidebarToggle {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    width: 20px;
+    height: 40px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 40px;
+    z-index: 2;
+}
+
+#gameListTitle {
+    margin: 0;
+    color: red;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.category h3 {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#game-container {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#gameFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#fullscreenToggle {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#mouse-detection-area {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    z-index: 9999;
+}
+
+#random-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#sidebar a, #sidebar h3 {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#sidebar a {
+    padding-left: 30px;
+    color: #333;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    padding: 1px 0;
+    cursor: pointer;
+}
+
+/* Refined Modal and Text Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Semi-transparent black */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #000; /* Solid black background */
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the title */
+    color: white; /* Text color */
+}
+
+.modal-body {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; /* Thumbnail to the left */
+    align-items: center; /* Align items vertically */
+}
+
+.close {
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+#gameThumbnail {
+    max-width: 200px; /* Maximum thumbnail width */
+    max-height: 200px; /* Maximum thumbnail height */
+    margin-right: 20px; /* Space between thumbnail and description */
+}
+
+#gameDescription {
+    max-width: 70%; /* Maximum width of the description */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+}

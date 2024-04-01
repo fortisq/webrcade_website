@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selector</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <div id="titleAndToggle">
+                <h2 id="gameListTitle" onclick="selectRandomGameAndShrink()">Select Your Game</h2>
+                <div id="sidebarToggle">></div>
+            </div>
+            <!-- Games will be loaded here dynamically -->
+        </div>
+        <div id="game-container">
+            <div id="random-image-container"></div> <!-- Container for random images -->
+            <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
+            <button id="fullscreenToggle">Go Fullscreen</button>
+        </div>
+    </div>
+    <!-- Game Details Modal -->
+    <div id="gameDetailsModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 id="gameTitle" style="text-align: center;"></h3> <!-- Game Title -->
+            <div class="modal-body">
+                <img id="gameThumbnail" src="" alt="" style="float: left; margin-right: 20px;">
+                <p id="gameDescription"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div id="mouse-detection-area"></div> <!-- Area for detecting mouse movement to show fullscreen button -->
+</body>
+</html>
