@@ -202,20 +202,3 @@ function loadRandomImage() {
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-By following this structure, you can create clear and comprehensive documentation that will help users understand and use your project effectively.
-
-Citations:
-[1] https://gist.github.com/silencesys/526778bf13924c0baf16171fbc3f8295
-[2] https://www.npmjs.com/package/read-excel-file
-[3] https://codetheory.in/parse-read-excel-files-xls-xlsx-javascript/
-[4] https://www.youtube.com/watch?v=v898ZuE10gc
-[5] https://community.coda.io/t/parsejson-to-generate-a-list/24787
-[6] https://gamedev.stackexchange.com/questions/109832/javascript-how-and-where-to-put-game-initialization-data
-[7] https://www.html5gamedevs.com/topic/42781-solved-js-game-save-and-load/
-[8] https://stackoverflow.com/questions/70362609/how-to-save-and-load-moves-in-a-game-using-javascript
-[9] https://www.w3schools.com/howto/howto_js_fullscreen.asp
-[10] https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
-[11] https://stackoverflow.com/questions/2777479/display-random-image-when-page-loads-without-utilizing-onload-in-the-body-tag
-[12] https://www.youtube.com/watch?v=PfzA1CX3aI4
-[13] https://www.geeksforgeeks.org/random-image-generator-using-javascript/
